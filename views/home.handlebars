@@ -1,0 +1,15 @@
+<h1>Example App: Home</h1>
+
+{{! if true, display our name }}
+{{#if isDisplayName}}
+  <h2>My name is {{name}}</h2>
+{{else}}
+  <p>No name found!</p>
+{{/if}}
+
+{{! if true, display age }}
+{{#if isAgeEnabled}}
+  <p>I am {{age}} years old </p>
+{{else}}
+  <p>No age found!!</p>
+{{/if}}

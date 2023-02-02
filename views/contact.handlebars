@@ -1,0 +1,39 @@
+<h2>Welcome to the contacts page</h2>
+
+{{! looping over array }}
+{{#each people}}
+  {{! this refers to each item in array }}
+  {{this}}
+  
+  {{!-- putting each item in paragraph --}}
+  <p> {{this}} </p>
+  
+  {{!-- period also works --}}
+  <p> {{.}} </p>
+
+  {{!-- looping with Index --}}
+  <p> {{@index}}: {{this}} </p>
+{{/each}}
+
+
+{{!-- looping over Object --}}
+{{#each user}}
+
+{{!-- this refers to value --}}
+<p> {{this}} </p>
+
+{{!-- @key refers to key --}}
+<p> {{@key}}: {{this}} </p>
+
+{{/each}}
+
+
+{{!-- looping within nested loops --}}
+{{#each lists}}
+
+{{#each this.items}}
+<p> {{this}} </p>
+{{/each}}
+<hr>
+
+{{/each}}
